@@ -24,6 +24,10 @@ svg {
     display: block;
 }
 
+.separator {
+    color: var(--line);
+}
+
 .input {
     outline: none;
     padding: 8px;
