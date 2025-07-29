@@ -4,8 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pollster</title>
+
+    <link rel="stylesheet" href="assets/css/auth.css">
 </head>
 <body>
-    
+    <!-- GOOGLE-ICON -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <!-- CHART ICON -->
+        <symbol id="chart" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" x2="12" y1="20" y2="10"/>
+            <line x1="18" x2="18" y1="20" y2="4"/>
+            <line x1="6" x2="6" y1="20" y2="16"/>
+        </symbol>
+        <symbol id="google-icon" viewBox="-0.5 0 48 48">
+            <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Color-" transform="translate(-401.000000, -860.000000)">
+                    <g id="Google" transform="translate(401.000000, 860.000000)">
+                        <path d="M9.82727273,24 C9.82727273,22.4757333 10.0804318,21.0144 10.5322727,19.6437333 L2.62345455,13.6042667 C1.08206818,16.7338667 0.213636364,20.2602667 0.213636364,24 C0.213636364,27.7365333 1.081,31.2608 2.62025,34.3882667 L10.5247955,28.3370667 C10.0772273,26.9728 9.82727273,25.5168 9.82727273,24" fill="#FBBC05"></path>
+                        <path d="M23.7136364,10.1333333 C27.025,10.1333333 30.0159091,11.3066667 32.3659091,13.2266667 L39.2022727,6.4 C35.0363636,2.77333333 29.6954545,0.533333333 23.7136364,0.533333333 C14.4268636,0.533333333 6.44540909,5.84426667 2.62345455,13.6042667 L10.5322727,19.6437333 C12.3545909,14.112 17.5491591,10.1333333 23.7136364,10.1333333" fill="#EB4335"></path>
+                        <path d="M23.7136364,37.8666667 C17.5491591,37.8666667 12.3545909,33.888 10.5322727,28.3562667 L2.62345455,34.3946667 C6.44540909,42.1557333 14.4268636,47.4666667 23.7136364,47.4666667 C29.4455,47.4666667 34.9177955,45.4314667 39.0249545,41.6181333 L31.5177727,35.8144 C29.3995682,37.1488 26.7323182,37.8666667 23.7136364,37.8666667" fill="#34A853"></path>
+                        <path d="M46.1454545,24 C46.1454545,22.6133333 45.9318182,21.12 45.6113636,19.7333333 L23.7136364,19.7333333 L23.7136364,28.8 L36.3181818,28.8 C35.6879545,31.8912 33.9724545,34.2677333 31.5177727,35.8144 L39.0249545,41.6181333 C43.3393409,37.6138667 46.1454545,31.6490667 46.1454545,24" fill="#4285F4"></path>
+                    </g>
+                </g>
+            </g>
+        </symbol>
+    </svg>
+
+    <!-- SUCCESS-ICON -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="success" viewBox="0 0 24 24" fill="none" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5"/>
+        </symbol>
+    </svg>
+
+    <!-- ERROR-ICON -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="error" viewBox="0 0 24 24" fill="none" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"/>
+            <path d="m6 6 12 12"/>
+        </symbol>
+    </svg>
+    <!-- ICON TEMPLATE  -->
+
+    <section class="body-left">
+        <div>
+            <h1>Pollster</h1>
+            <h3>Suarakan Pendapat Anda</h3>
+        </div>
+
+        <svg width="350" height="350">
+            <use href="#chart"></use>
+        </svg>
+    </section>
+    <section class="body-right">
+        <div class="auth-container hidden">
+            <h2>Selamat Datang Kembali</h2>
+        
+            <form class="form" id="login-form">
+                <div class="form-field">
+                    <label for="username-input-login">Username</label>
+                    <input type="text" name="username-input-login" id="username-input-login" class="input" placeholder="Masukkan username">
+                </div>
+                <div class="form-field">
+                    <label for="password-input-login">Password</label>
+                    <input type="password" name="password-input-login" id="password-input-login" class="input" placeholder="Masukkan password">
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+            </form>
+
+            <h5 class="auth-container__switch-link">Belum punya akun? <b>Daftar di sini</b></h5>
+            
+            <hr class="separator">
+            <div class="auth-container__other-logins">
+                <svg width="24" height="24" style="vertical-align:middle;">
+                    <use href="#google-icon"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="auth-container ">
+            <h2>Buat Akun Baru</h2>
+        
+            <form class="form" id="register-form">
+                <div class="form-field">
+                    <label for="username-input-register">Username</label>
+                    <input type="text" name="username-input-register" id="username-input-register" class="input" placeholder="Masukkan username">
+                </div>
+                <div class="form-field">
+                    <label for="password-input-register">Password</label>
+                    <input type="password" name="password-input-register" id="password-input-register" class="input" placeholder="Masukkan password">
+                </div>
+
+                <button type="submit" class="btn">Register</button>
+            </form>
+
+            <h5 class="auth-container__switch-link">Sudah punya akun? <b>Login di sini</b></h5>
+            
+            <hr class="separator">
+            <div class="auth-container__other-logins">
+                <svg width="24" height="24" style="vertical-align:middle;">
+                    <use href="#google-icon"></use>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <div class="notification-container notification-container--error">
+        <svg width="32" height="32" viewBox="0 0 24 24">
+            <use id="notification-icon" href="#success"></use>
+        </svg>
+
+        <div class="notification-container__text-container">
+            <h3 class="text-container__title">Success</h3>
+            <h4 class="text-container__message">message</h>
+        </div>
+    </div>
+
+    <script type="module" src="assets/js/auth.js"></script>
 </body>
 </html>
