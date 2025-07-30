@@ -63,7 +63,7 @@ svg {
 
 .notification-container {
     position: fixed;
-    right: 20px;
+    right: 0px;
     top: 20px;
     z-index: 999;
     padding: 10px;
@@ -82,12 +82,19 @@ svg {
     opacity: 1;
 }
 
+.notification-container__text-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .text-container__title {
+    font-size: 18px;
     font-weight: 600;
 }
 
 .text-container__message {
     color: #6C757D;
+    font-size: 16px;
     font-weight: 400;
 }
 

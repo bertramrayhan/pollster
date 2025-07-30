@@ -27,6 +27,20 @@
         </symbol>
     </svg>
 
+    <!-- SUCCESS-ICON -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="success" viewBox="0 0 24 24" fill="none" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5"/>
+        </symbol>
+    </svg>
+
+    <!-- ERROR-ICON -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="error" viewBox="0 0 24 24" fill="none" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"/>
+            <path d="m6 6 12 12"/>
+        </symbol>
+    </svg>
     <!-- TEMPLATE ICON -->
 
     <header>
@@ -60,81 +74,19 @@
                     </div>
                 </div>
             </div>
-
-            <div class="poll-card">
-                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
-                <div class="poll-card__bottom">
-                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
-                    <div class="people-indicator">
-                        <svg width="18" height="18" viewbox="0 0 24 24">
-                            <use href="#users"></use>
-                        </svg>
-                        <h4>1,254 suara</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="poll-card">
-                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
-                <div class="poll-card__bottom">
-                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
-                    <div class="people-indicator">
-                        <svg width="18" height="18" viewbox="0 0 24 24">
-                            <use href="#users"></use>
-                        </svg>
-                        <h4>1,254 suara</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="poll-card">
-                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
-                <div class="poll-card__bottom">
-                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
-                    <div class="people-indicator">
-                        <svg width="18" height="18" viewbox="0 0 24 24">
-                            <use href="#users"></use>
-                        </svg>
-                        <h4>1,254 suara</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="poll-card">
-                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
-                <div class="poll-card__bottom">
-                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
-                    <div class="people-indicator">
-                        <svg width="18" height="18" viewbox="0 0 24 24">
-                            <use href="#users"></use>
-                        </svg>
-                        <h4>1,254 suara</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="poll-card">
-                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
-                <div class="poll-card__bottom">
-                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
-                    <div class="people-indicator">
-                        <svg width="18" height="18" viewbox="0 0 24 24">
-                            <use href="#users"></use>
-                        </svg>
-                        <h4>1,254 suara</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="poll-card">
-                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
-                <div class="poll-card__bottom">
-                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
-                    <div class="people-indicator">
-                        <svg width="18" height="18" viewbox="0 0 24 24">
-                            <use href="#users"></use>
-                        </svg>
-                        <h4>1,254 suara</h4>
-                    </div>
-                </div>
-            </div>
         </div>
     </main>
+
+    <div class="notification-container ">
+        <svg width="32" height="32" viewBox="0 0 24 24">
+            <use id="notification-icon" href="#success"></use>
+        </svg>
+
+        <div class="notification-container__text-container">
+            <span class="text-container__title">Success</span>
+            <span class="text-container__message">message</span>
+        </div>
+    </div>
 
     <template id="poll-card-template">
         <div class="poll-card">
@@ -150,5 +102,7 @@
             </div>
         </div>
     </template>
+    
+    <script type="module" src="assets/js/dashboard.js"></script>
 </body>
 </html>

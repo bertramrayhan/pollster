@@ -98,4 +98,14 @@ function generateNewId($conn, string $column, string $table, string $prefix, int
 
     return $idBaru;
 }
+
+function checkIdUser(){    
+    if(!isset($_SESSION['idUser'])){
+        http_response_code(401);
+        echo returnMessage(false, 'Akses ditolak. Silahkan login terlebih dahulu');
+        return false;
+    }
+    
+    return true;
+}
 ?>
