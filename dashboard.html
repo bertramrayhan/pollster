@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollster</title>
+    
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+    <!-- LOGOUT -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="logout" viewBox="0 0 24 24" fill="none" stroke="#343A40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m16 17 5-5-5-5"/>
+            <path d="M21 12H9"/>
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+        </symbol>
+    </svg>
+
+    <!-- USERS -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="users" viewBox="0 0 24 24" fill="none" stroke="#6C757D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <path d="M16 3.128a4 4 0 0 1 0 7.744"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <circle cx="9" cy="7" r="4"/>
+        </symbol>
+    </svg>
+
+    <!-- TEMPLATE ICON -->
+
+    <header>
+        <div class="header-left">
+            <h2>Pollster</h2>
+        </div>
+        <div class="header-right">
+            <button class="btn new-poll-btn">+ Buat Polling Baru</button>
+            <button class="btn logout-btn">
+                <svg width="24" height="24" viewbox="0 0 24 24">
+                    <use href="#logout"></use>
+                </svg>
+                Logout
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Polling yang Sedang Tren</h1>
+
+        <div class="main__poll-cards-container">
+            <div class="poll-card">
+                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
+                <div class="poll-card__bottom">
+                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
+                    <div class="people-indicator">
+                        <svg width="18" height="18" viewbox="0 0 24 24">
+                            <use href="#users"></use>
+                        </svg>
+                        <h4>1,254 suara</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="poll-card">
+                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
+                <div class="poll-card__bottom">
+                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
+                    <div class="people-indicator">
+                        <svg width="18" height="18" viewbox="0 0 24 24">
+                            <use href="#users"></use>
+                        </svg>
+                        <h4>1,254 suara</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-card">
+                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
+                <div class="poll-card__bottom">
+                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
+                    <div class="people-indicator">
+                        <svg width="18" height="18" viewbox="0 0 24 24">
+                            <use href="#users"></use>
+                        </svg>
+                        <h4>1,254 suara</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-card">
+                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
+                <div class="poll-card__bottom">
+                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
+                    <div class="people-indicator">
+                        <svg width="18" height="18" viewbox="0 0 24 24">
+                            <use href="#users"></use>
+                        </svg>
+                        <h4>1,254 suara</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-card">
+                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
+                <div class="poll-card__bottom">
+                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
+                    <div class="people-indicator">
+                        <svg width="18" height="18" viewbox="0 0 24 24">
+                            <use href="#users"></use>
+                        </svg>
+                        <h4>1,254 suara</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-card">
+                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
+                <div class="poll-card__bottom">
+                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
+                    <div class="people-indicator">
+                        <svg width="18" height="18" viewbox="0 0 24 24">
+                            <use href="#users"></use>
+                        </svg>
+                        <h4>1,254 suara</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="poll-card">
+                <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
+                <div class="poll-card__bottom">
+                    <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
+                    <div class="people-indicator">
+                        <svg width="18" height="18" viewbox="0 0 24 24">
+                            <use href="#users"></use>
+                        </svg>
+                        <h4>1,254 suara</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <template id="poll-card-template">
+        <div class="poll-card">
+            <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
+            <div class="poll-card__bottom">
+                <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
+                <div class="people-indicator">
+                    <svg width="18" height="18" viewbox="0 0 24 24">
+                        <use href="#users"></use>
+                    </svg>
+                    <h4>1,254 suara</h4>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+</html>
