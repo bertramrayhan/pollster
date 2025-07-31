@@ -61,8 +61,8 @@
     <main>
         <h1>Polling yang Sedang Tren</h1>
 
-        <div class="main__poll-cards-container">
-            <div class="poll-card">
+        <div class="main__poll-cards-container" id="poll-cards-container">
+            <!-- <div class="poll-card">
                 <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
                 <div class="poll-card__bottom">
                     <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
@@ -73,7 +73,7 @@
                         <h4>1,254 suara</h4>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </main>
 
@@ -89,18 +89,18 @@
     </div>
 
     <template id="poll-card-template">
-        <div class="poll-card">
-            <h3>Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
+        <a href="#" class="poll-card">
+            <h3 class="question">Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
             <div class="poll-card__bottom">
-                <h4>Dibuat oleh [Nama Pengguna] • [Tanggal]</h4>
+                <h4>Dibuat oleh [<span class="author">Author</span>] • [<span class="created-date">Tanggal</span>]</h4>
                 <div class="people-indicator">
                     <svg width="18" height="18" viewbox="0 0 24 24">
                         <use href="#users"></use>
                     </svg>
-                    <h4>1,254 suara</h4>
+                    <h4 class="vote-count">1,254 suara</h4>
                 </div>
             </div>
-        </div>
+        </a>
     </template>
     
     <script type="module" src="assets/js/dashboard.js"></script>
