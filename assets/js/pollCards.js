@@ -19,7 +19,7 @@ export function loadPollCards(polls){
     for (const poll of polls) {
         const pollCardClone = pollCardTemplate.content.cloneNode(true);
 
-        pollCardClone.querySelector('.poll-card').href = `poll.html?slug=${poll.slug}`;
+        pollCardClone.querySelector('.poll-card').href = `detailPoll.html?slug=${poll.slug}`;
 
         pollCardClone.querySelector('.question').textContent = poll.question;
 

@@ -8,8 +8,23 @@
     <link rel="stylesheet" href="assets/css/detailPoll.css">
 </head>
 <body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="back" viewBox="0 0 24 24" fill="none" stroke="#212529" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 8L2 12L6 16"/>
+            <path d="M2 12H22"/>
+        </symbol>
+    </svg>
+    <!-- TEMPLATE ICON -->
+
     <header>
-        <h1>Judul Utama Halaman</h1>
+        <h1 class="question"></h1>
+        <button class="back-btn btn">
+            <svg width="27" height="27" viewbox="0 0 24 24">
+                <use href="#back"></use>
+            </svg>
+            <h3>Kembali</h3>
+        </button>
     </header>
 
     <main>
@@ -18,19 +33,6 @@
                 <div class="main-left__top">
                     <h2>Berikan Suara Anda</h2>
                     <div class="poll-options">
-                        <div class="poll-option">
-                            <input type="radio" name="vote" id="Javascript">
-                            <label for="Javascript">Javascript</label>
-                        </div>
-                        <div class="poll-option">
-                            <input type="radio" name="vote" id="Python">
-                            <label for="Python">Python</label>
-                        </div>
-                        <div class="poll-option">
-                            <input type="radio" name="vote" id="C++">
-                            <label for="C++">C++</label>
-                        </div>
-                        
                     </div>
                 </div>
 
@@ -44,48 +46,7 @@
         <div class="main-right main-container">
             <h2>Hasil Langsung</h2>
             <div class="votes">
-                <div class="vote">
-                    <div class="vote__text">
-                        <div class="text__left">
-                            <h3>Javascript</h3>
-                            <h5>500 Suara</h5>
-                        </div>
-                        <h4>50%</h4>
-                    </div>
-
-                    <div class="vote-bar">
-                        <div class="vote-bar vote-bar__inner">
-                        </div>
-                    </div>
-                </div>
-                <div class="vote">
-                    <div class="vote__text">
-                        <div class="text__left">
-                            <h3>Python</h3>
-                            <h5>500 Suara</h5>
-                        </div>
-                        <h4>50%</h4>
-                    </div>
-
-                    <div class="vote-bar">
-                        <div class="vote-bar vote-bar__inner">
-                        </div>
-                    </div>
-                </div>
-                <div class="vote">
-                    <div class="vote__text">
-                        <div class="text__left">
-                            <h3>C++</h3>
-                            <h5>500 Suara</h5>
-                        </div>
-                        <h4>50%</h4>
-                    </div>
-
-                    <div class="vote-bar">
-                        <div class="vote-bar vote-bar__inner">
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             
         </div>
@@ -102,10 +63,10 @@
         <div class="vote">
             <div class="vote__text">
                 <div class="text__left">
-                    <h3>C++</h3>
-                    <h5>500 Suara</h5>
+                    <h3 class="vote-text">C++</h3>
+                    <h5 class="total-vote">500 Suara</h5>
                 </div>
-                <h4>50%</h4>
+                <h4 class="vote-percentage">50%</h4>
             </div>
 
             <div class="vote-bar">
@@ -114,5 +75,7 @@
             </div>
         </div>
     </template>
+
+    <script type="module" src="assets/js/detailPoll.js"></script>
 </body>
 </html>

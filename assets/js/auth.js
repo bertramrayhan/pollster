@@ -1,4 +1,4 @@
-import { showNotification } from "./notification.js";
+import { putNotification, showNotification } from "./notification.js";
 
 let switchLinks = document.querySelectorAll('.auth-container__switch-link');
 let usernameInputLogin = document.getElementById('username-input-login');
@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     passwordInputLogin.value = '';
     usernameInputRegister.value = '';
     passwordInputRegister.value = '';
+
+    putNotification();
 })
 
 function handleAuthSubmit(e, mode) {

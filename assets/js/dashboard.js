@@ -1,31 +1,20 @@
-import { showNotification } from "./notification.js";
+import { putNotification, showNotification } from "./notification.js";
 import { loadPollCards } from "./pollCards.js";
-import { makeResponse, throwHTTPError } from "./util.js";
+import { makeResponse, throwHTTPError, checkLoginStatus } from "./util.js";
 
 let logoutBtn = document.querySelector('.logout-btn');
 
 logoutBtn.addEventListener('click', logout);
 document.addEventListener('DOMContentLoaded', async function(){
+    await putNotification();
     await checkLoginStatus();
     await getAllPolls();
-});
 
-async function checkLoginStatus() {
-    try {
-        const response = await fetch('php/index.php?action=checkLoginStatus', makeResponse({}));
-
-        throwHTTPError(response.ok, response.status);
-
-        const confirmation = await response.json();
-        if(!confirmation.loggedIn){
-            window.location.href = 'auth.html';
-        }
-
-    } catch (error) {
-        console.error(error);
-        window.location.href = 'auth.html';
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('error') === 'poll-not-found') {
+        showNotification(false, 'Poll tidak ditemukan');
     }
-}
+});
 
 async function logout(){
     try {
@@ -34,7 +23,6 @@ async function logout(){
         throwHTTPError(response.ok, response.status);
 
         const confirmation = await response.json();
-        console.log(confirmation.message);
 
         if(confirmation.success){
             showNotification(true, 'Logout berhasil!');

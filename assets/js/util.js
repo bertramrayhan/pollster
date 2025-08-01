@@ -31,3 +31,20 @@ export function formatTanggalIndo(dateString) {
     const year = date.getFullYear();
     return `${day} ${month} ${year}`;
 }
+
+export async function checkLoginStatus() {
+    try {
+        const response = await fetch('php/index.php?action=checkLoginStatus', makeResponse({}));
+
+        throwHTTPError(response.ok, response.status);
+
+        const confirmation = await response.json();
+        if(!confirmation.loggedIn){
+            window.location.href = 'auth.html';
+        }
+
+    } catch (error) {
+        console.error(error);
+        window.location.href = 'auth.html';
+    }
+}

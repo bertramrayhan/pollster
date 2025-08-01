@@ -51,6 +51,22 @@ body {
 
 header {
     padding: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    color: #212529;
+}
+
+.btn.back-btn:hover {
+    background-color: transparent;
 }
 
 main {
@@ -72,6 +88,7 @@ main {
 
 .main-left {
     width: 40%;
+    height: calc(100vh - 128px);
 }
 
 .main-right {
