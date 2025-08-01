@@ -1,14 +1,30 @@
-let notification = document.querySelector('.notification-container');
-let notificationTitle = document.querySelector('.text-container__title');
-let notificationMessage = document.querySelector('.text-container__message');
-let notificationIcon = document.getElementById('notification-icon');
+export async function putNotification(){
+    const response = await fetch('notification.html');
+    const html = await response.text();
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html.trim();
+    const notificationTemplate = tempDiv.querySelector('template');
+    const notificationClone = notificationTemplate.content.cloneNode(true);
 
-let isNotificationOpen = false;
+    document.body.appendChild(notificationClone);
+}
+
+let lastNotificationTimeout = null;
+let lastAddedClass = null;
 let lastMessage = '';
 
 export function showNotification(isSuccess = false, message){
-    if(isNotificationOpen && lastMessage === message){
+    let notification = document.querySelector('.notification-container');
+    let notificationTitle = document.querySelector('.text-container__title');
+    let notificationMessage = document.querySelector('.text-container__message');
+    let notificationIcon = document.getElementById('notification-icon');
+
+    if(lastNotificationTimeout && lastMessage === message){
         return;
+    }else if(lastNotificationTimeout && lastMessage !== message) {
+        clearTimeout(lastNotificationTimeout);
+        notification.classList.remove('show');
+        notification.classList.remove(lastAddedClass);
     }
 
     let addedClass;
@@ -22,20 +38,19 @@ export function showNotification(isSuccess = false, message){
         notificationTitle.textContent = 'Error';
         notificationIcon.setAttribute('href', '#error');
     }
-    
+    lastAddedClass = addedClass;
     notificationMessage.textContent = message;
     lastMessage = message;
 
     notification.classList.add(addedClass);
     notification.classList.add('show');
-    isNotificationOpen = true;
 
-    setTimeout(() => {
+    lastNotificationTimeout = setTimeout(() => {
         notification.classList.remove('show');
 
         setTimeout(() => {
             notification.classList.remove(addedClass);
-            isNotificationOpen = false;
+            lastNotificationTimeout = null;
         }, 400);
     }, 2000);
 }
