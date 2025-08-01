@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollster</title>
+
+    <link rel="stylesheet" href="assets/css/detailPoll.css">
+</head>
+<body>
+    <header>
+        <h1>Judul Utama Halaman</h1>
+    </header>
+
+    <main>
+        <div class="main-left main-container">
+            <form id="vote-form">
+                <div class="main-left__top">
+                    <h2>Berikan Suara Anda</h2>
+                    <div class="poll-options">
+                        <div class="poll-option">
+                            <input type="radio" name="vote" id="Javascript">
+                            <label for="Javascript">Javascript</label>
+                        </div>
+                        <div class="poll-option">
+                            <input type="radio" name="vote" id="Python">
+                            <label for="Python">Python</label>
+                        </div>
+                        <div class="poll-option">
+                            <input type="radio" name="vote" id="C++">
+                            <label for="C++">C++</label>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="main-left__bottom">
+                    <button class="btn vote-btn">Kirim Suara</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="main-right main-container">
+            <h2>Hasil Langsung</h2>
+            <div class="votes">
+                <div class="vote">
+                    <div class="vote__text">
+                        <div class="text__left">
+                            <h3>Javascript</h3>
+                            <h5>500 Suara</h5>
+                        </div>
+                        <h4>50%</h4>
+                    </div>
+
+                    <div class="vote-bar">
+                        <div class="vote-bar vote-bar__inner">
+                        </div>
+                    </div>
+                </div>
+                <div class="vote">
+                    <div class="vote__text">
+                        <div class="text__left">
+                            <h3>Python</h3>
+                            <h5>500 Suara</h5>
+                        </div>
+                        <h4>50%</h4>
+                    </div>
+
+                    <div class="vote-bar">
+                        <div class="vote-bar vote-bar__inner">
+                        </div>
+                    </div>
+                </div>
+                <div class="vote">
+                    <div class="vote__text">
+                        <div class="text__left">
+                            <h3>C++</h3>
+                            <h5>500 Suara</h5>
+                        </div>
+                        <h4>50%</h4>
+                    </div>
+
+                    <div class="vote-bar">
+                        <div class="vote-bar vote-bar__inner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <template id="poll-option-template">
+        <div class="poll-option">
+            <input type="radio" name="vote" id="Javascript">
+            <label for="Javascript">Javascript</label>
+        </div>
+    </template>
+
+    <template id="vote-template">
+        <div class="vote">
+            <div class="vote__text">
+                <div class="text__left">
+                    <h3>C++</h3>
+                    <h5>500 Suara</h5>
+                </div>
+                <h4>50%</h4>
+            </div>
+
+            <div class="vote-bar">
+                <div class="vote-bar vote-bar__inner">
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+</html>

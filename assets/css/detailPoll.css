@@ -1,0 +1,150 @@
+@import url(global.css);
+
+h1, h2, label, h3, h4 {
+    color: var(--text-main);
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-primary);
+    cursor: pointer;
+}
+
+body {
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    padding: 18px;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+.main-container {
+    background-color: var(--bg-container);
+    margin: 10px 20px 15px 20px;
+    padding: 23px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 
+                0 1px 2px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-left {
+    width: 40%;
+}
+
+.main-right {
+    width: 60%;
+}
+
+#vote-form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-left__top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.poll-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.poll-option {
+    width: fit-content;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.poll-option label {
+    cursor: pointer;
+}
+
+.vote-btn {
+    width: 100%;
+}
+
+.votes {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.vote {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.vote__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.text__left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.vote-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #e9ecef;
+    border-radius: 6px;
+}
+
+.vote-bar__inner {
+    width: 50%;
+    background-color: red;
+}
