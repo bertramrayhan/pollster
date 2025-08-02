@@ -108,4 +108,9 @@ function checkIdUser(){
     
     return true;
 }
+
+function returnErrorQuery($conn){
+    http_response_code(500);
+    echo returnMessage(false, "Gagal menjalankan query: " . $conn->error);
+}
 ?>

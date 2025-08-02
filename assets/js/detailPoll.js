@@ -1,7 +1,7 @@
 import { putNotification, showNotification } from "./notification.js";
 import { makeResponse, throwHTTPError, checkLoginStatus } from "./util.js";
 
-const slug = null;
+let slug = null;
 let backBtn = document.querySelector('.back-btn');
 let question = document.querySelector('.question');
 let pollOptions = document.querySelector('.poll-options');
@@ -135,9 +135,10 @@ async function vote(){
 
         const confirmation = await response.json();
         if(confirmation.success){
-            getDetailPoll(slug);
+            await getDetailPoll(slug);
+            showNotification(true, 'Vote berhasil!');
         }else{
-            showNotification(false, 'Vote gagal');
+            showNotification(false, confirmation.message);
         }
 
     } catch (error) {

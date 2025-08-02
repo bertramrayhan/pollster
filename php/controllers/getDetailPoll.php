@@ -34,8 +34,6 @@ if($result){
         ]);
     }
 }else {
-    http_response_code(500);
-    echo returnMessage(false, "Gagal menjalankan query: " . $conn->error);
-    error_log("Gagal menjalankan query: " . $conn->error);
+    returnErrorQuery($conn);
 }
 ?>
