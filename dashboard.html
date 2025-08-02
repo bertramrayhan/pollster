@@ -27,6 +27,14 @@
         </symbol>
     </svg>
 
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="delete" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
+            <path d="M3 6h18"/>
+            <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+        </symbol>
+    </svg>
     <!-- TEMPLATE ICON -->
 
     <header>
@@ -63,6 +71,41 @@
         </div>
     </main>
 
+    <div class="modal-backdrop hidden"></div>
+
+    <div class="create-poll-container hidden">
+        <div class="create-poll-container__header">
+            <h1>Buat Polling Baru</h1>
+            <button type="button" class="close-btn"><h2>X</h2></button>
+        </div>
+        <form id="create-poll-form">
+            <input type="text" name="question" placeholder="Masukkan judul polling" class="input" required>
+
+            <h2>Pilihan Jawaban</h2>
+
+            <div class="options-container">
+                <div class="option">
+                    <input type="text" name="options" placeholder="Masukkan Pilihan" class="input" required>
+                    <button type="button" class="delete-btn">
+                        <svg width="24" height="24" viewbox="0 0 24 24">
+                            <use href="#delete"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="option">
+                    <input type="text" name="options" placeholder="Masukkan Pilihan" class="input" required>
+                    <button type="button" class="delete-btn">
+                        <svg width="24" height="24" viewbox="0 0 24 24">
+                            <use href="#delete"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <button type="button" class="add-option-btn"><h4>+ tambah Pilihan</h4></button>
+            <button type="submit" class="btn">Publikasikan Polling</button>
+        </form>
+    </div>
+
     <template id="poll-card-template">
         <a href="#" class="poll-card">
             <h3 class="question">Framework Frontend Mana yang Akan Kamu Pelajari di 2025?</h3>
@@ -78,6 +121,18 @@
         </a>
     </template>
     
+    <template id="option-template">
+        <div class="option">
+            <input type="text" name="options" placeholder="Masukkan Pilihan" class="input" required>
+            <button type="button" class="delete-btn">
+                <svg width="24" height="24" viewbox="0 0 24 24">
+                    <use href="#delete"></use>
+                </svg>
+            </button>
+        </div>
+    </template>
+
     <script type="module" src="assets/js/dashboard.js"></script>
+    <script type="module" src="assets/js/addPoll.js"></script>
 </body>
 </html>

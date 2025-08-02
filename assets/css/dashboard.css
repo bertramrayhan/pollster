@@ -103,3 +103,95 @@ main {
     gap: 10px;
     align-items: center;
 }
+
+/* MODAL */
+
+input {
+    width: 100%;
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;  /* Di bawah modal */
+}
+
+.modal-backdrop.hidden {
+    display: none;
+}
+
+.create-poll-container {
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: #fff;
+    padding: 26px;
+    border-radius: 12px;
+    gap: 28px;
+    width: 600px;
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: transform 0.2s ease-out;
+}
+
+.create-poll-container.hidden {
+    display: none;
+}
+
+.create-poll-container.show {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.create-poll-container__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-btn, .add-option-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+#create-poll-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type='text'] {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 5px;
+}
+
+.option.input {
+    flex: 1;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    color: #6C757D;
+}
