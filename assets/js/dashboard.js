@@ -3,12 +3,18 @@ import { loadPollCards } from "./pollCards.js";
 import { makeResponse, throwHTTPError, checkLoginStatus } from "./util.js";
 
 let logoutBtn = document.querySelector('.logout-btn');
+let createPollContainer = document.querySelector('.create-poll-container');
+let modalBackdrop = document.querySelector('.modal-backdrop');
+let createPollForm = document.getElementById('create-poll-form');
+let createPollBtn = document.querySelector('.new-poll-btn');
+let closeBtn = document.querySelector('.close-btn');
 
 logoutBtn.addEventListener('click', logout);
 document.addEventListener('DOMContentLoaded', async function(){
     await putNotification();
     await checkLoginStatus();
     await getAllPolls();
+    createPollForm.reset();
 
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('error') === 'poll-not-found') {
@@ -37,7 +43,7 @@ async function logout(){
     }
 }
 
-async function getAllPolls(){
+export async function getAllPolls(){
     try {
         const response = await fetch('php/index.php?action=getAllPolls', makeResponse());
 
@@ -51,5 +57,27 @@ async function getAllPolls(){
     } catch (error) {
         showNotification(false, 'Gagal memuat data poll.');
         console.error(error);
+    }
+}
+
+
+createPollBtn.addEventListener('click', switchCreatePollModal);
+closeBtn.addEventListener('click', switchCreatePollModal);
+export function switchCreatePollModal(){
+    if(createPollContainer.classList.contains('hidden')){
+        createPollContainer.classList.remove('hidden');
+        modalBackdrop.classList.remove('hidden');
+
+        setTimeout(() => {
+            createPollContainer.classList.add('show');
+        }, 10);
+    }else {
+        createPollContainer.classList.remove('show');
+        
+        setTimeout(() => {
+            createPollContainer.classList.add('hidden');
+            modalBackdrop.classList.add('hidden');
+            createPollForm.reset();
+        }, 200);
     }
 }

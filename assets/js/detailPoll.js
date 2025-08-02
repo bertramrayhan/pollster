@@ -72,7 +72,7 @@ function setDetailPollPage(detailPoll){
         const totalVote = row['total_vote'];
         const totalVotes = row['total_votes'];
 
-        const votePercentage = ((totalVote / totalVotes) * 100).toFixed(1) + '%';
+        const votePercentage = totalVotes !== 0 ? ((totalVote / totalVotes) * 100).toFixed(1) + '%' : 0;
 
         const pollOptionClone = pollOptionTemplate.content.cloneNode(true);
 
