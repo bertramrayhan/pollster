@@ -92,6 +92,17 @@ main {
     text-decoration: none;
 }
 
+.poll-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.poll-card__top__actions {
+    display: flex;
+    gap: 7px;
+}
+
 .poll-card__bottom {
     display: flex;
     align-items: flex-start;
@@ -149,13 +160,6 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.close-btn, .add-option-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    width: fit-content;
 }
 
 #create-poll-form {

@@ -20,8 +20,12 @@ export function loadPollCards(polls){
         const pollCardClone = pollCardTemplate.content.cloneNode(true);
 
         pollCardClone.querySelector('.poll-card').href = `detailPoll.html?slug=${poll.slug}`;
+        
+        pollCardClone.querySelector('.poll-card').setAttribute('data-id-poll', poll['id_poll']);
 
         pollCardClone.querySelector('.question').textContent = poll.question;
+
+        pollCardClone.querySelector('.poll-card__top__actions').style.display = poll['is_owner'] === 0 ? 'none' : 'flex';
 
         pollCardClone.querySelector('.author').textContent = poll.author;
 

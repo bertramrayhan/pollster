@@ -8,6 +8,7 @@ let modalBackdrop = document.querySelector('.modal-backdrop');
 let createPollForm = document.getElementById('create-poll-form');
 let createPollBtn = document.querySelector('.new-poll-btn');
 let closeBtn = document.querySelector('.close-btn');
+let pollCardsContainer = document.getElementById('poll-cards-container');
 
 logoutBtn.addEventListener('click', logout);
 document.addEventListener('DOMContentLoaded', async function(){
@@ -79,5 +80,42 @@ export function switchCreatePollModal(){
             modalBackdrop.classList.add('hidden');
             createPollForm.reset();
         }, 200);
+    }
+}
+
+pollCardsContainer.addEventListener('click', function(e){
+    const deleteBtn = e.target.closest('.delete-poll-btn');
+    const idPoll = e.target.closest('.poll-card').dataset.idPoll; 
+
+    if(deleteBtn){
+        e.stopPropagation();
+        e.preventDefault();
+
+        deletePoll(idPoll);
+    }
+});
+
+async function deletePoll(idPoll){
+    try {
+        const response = await fetch('php/index.php?action=deletePoll', {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ idPoll: idPoll })
+        });
+
+        throwHTTPError(response.ok, response.status);
+
+        const confirmation = await response.json();
+        if(confirmation.success){
+            showNotification(true, confirmation.message);
+            getAllPolls();
+        }else {
+            showNotification(false, confirmation.message);
+        }
+
+    } catch (error) {
+        console.error(error);
     }
 }
