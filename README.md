@@ -3,15 +3,15 @@
 
 <div align="center">
   <figure style="display: inline-block; margin: 10px;">
-    <img src="https://raw.githubusercontent.com/bertramrayhan/pollster/demo/main-page.png" width="250px" alt="Authentication Page"/>
+    <img src="https://raw.githubusercontent.com/bertramrayhan/pollster/main/demo/authentication.png" width="250px" alt="Authentication Page"/>
     <figcaption align="center"><b>Authentication Page</b></figcaption>
   </figure>
   <figure style="display: inline-block; margin: 10px;">
-    <img src="https://raw.githubusercontent.com/bertramrayhan/pollster/demo/poll-page.png" width="250px" alt="Main Page"/>
+    <img src="https://raw.githubusercontent.com/bertramrayhan/pollster/main/demo/main-page.png" width="250px" alt="Main Page"/>
     <figcaption align="center"><b>Main Page</b></figcaption>
   </figure>
   <figure style="display: inline-block; margin: 10px;">
-    <img src="https://raw.githubusercontent.com/bertramrayhan/pollster/demo/authentication.png" width="250px" alt="Polling Page"/>
+    <img src="https://raw.githubusercontent.com/bertramrayhan/pollster/main/demo/poll-page.png" width="250px" alt="Polling Page"/>
     <figcaption align="center"><b>Polling Page</b></figcaption>
   </figure>
 </div>
